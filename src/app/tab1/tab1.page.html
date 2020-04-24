@@ -1,17 +1,43 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Killer Tech
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<!--Quiz using geoloaction to tell you what piece of tech you are!-->
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content [fullscreen]="true">
+  <div style="padding-left: 25%;">
+  <h2>Global Location</h2>
+  <p>what Tech are you?</p>
+
+   <!--Quiz text-->
+  <p>Using super advanced geoloaction this quiz will tell you what piece of technology you are!</p>
+
+  <div>
+
+    <!--Image for quiz src from assests-->
+    <img src="assets/quiz.png">
+
+    <!--Quiz text-->
+    <p>Click on the button to find your magic number that will match up with the image above</p>
+    <p>the first 2 digits are your magic number!</p>
+
+    <!--Button with Method to call geolocation when button is clicked-->
+    <ion-button (click)="geoMethod()">Click Me!</ion-button>
+    
+    <br>
+
+    <!--Quiz reffrence using string interpolation-->
+    {{quiz}}
+
+    <br>
+    <br>
+    <br>
+
+  </div>
+  </div>
+
 </ion-content>
